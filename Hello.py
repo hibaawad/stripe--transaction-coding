@@ -14,9 +14,13 @@ def run():
     )
 
     ledger_file = st.file_uploader("Please upload ledger file in csv")
+    st.divider()
     stripe_transaction_file = st.file_uploader("Please upload Stripe Treasury file in csv")
+    st.divider()
     gold_tsy_file = st.file_uploader("Please upload Gold Treasury File")
+    st.divider()
     platinum_tsy_file = st.file_uploader("Please upload Platinum Treasury file")
+    st.divider()
     if ledger_file: 
       ledger_df = pd.read_csv(ledger_file)
       st.session_state['tsy'] = False
